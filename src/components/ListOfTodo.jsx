@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
 
 const TodoItem = styled.li`
   list-style: none;
@@ -8,7 +9,7 @@ const TodoItem = styled.li`
   font-size: 20px;
 `;
 
-export default function TodoList({todoInfo,OnClickD,OnClickU}){
+export default function ListOfTodo({todoInfo,OnClickD,OnClickU}){
 
   // state
 

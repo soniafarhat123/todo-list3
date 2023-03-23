@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import TodoForm from "./components/TodoForm";
-import TodoList from "./components/TodoList";
+import ListOfTodo from "./components/ListOfTodo";
 
 const TodoListWrapper = styled.div`
   background-color: #f9f9f9;
@@ -54,11 +54,11 @@ function App() {
       <ul>
         {TodoList.map((todo) => {
           return (
-            <TodoList
+            <ListOfTodo
               todoInfo={todo}
               key={todo.id}
-              OnClickD={() => () => handleDelete(todo.id)}
-              OnClickUpdate={() =>
+              OnClickD={() => handleDelete(todo.id)}
+              OnClickU={() =>
                 handleEdit(todo.id, prompt("Modifier la tache : ", todo.name))
               }
             />
